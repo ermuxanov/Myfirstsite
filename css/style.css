@@ -53,7 +53,7 @@ body {
   border-bottom: 1px solid #001e64;
 }
 .header__content {
-  background-image: url("../images/Header-bg.png");
+  background-image: url("/images/Header-bg.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -423,6 +423,9 @@ body {
   .product__name {
     width: 350px;
   }
+  .footer__inner {
+    padding: 0;
+  }
 }
 @media (max-width: 1000px) {
   .menu__list {
@@ -472,6 +475,7 @@ body {
     padding-top: 0;
     margin-bottom: 80px;
     display: flex;
+    flex-direction: column;
   }
   .product__name-item + .product__name-item {
     margin-top: 0;
@@ -497,6 +501,25 @@ body {
   .product__name .slick-active button {
     background-color: #001e64;
   }
+  .product-prev {
+    top: -25px;
+  }
+  .product-next {
+    padding-top: 25px;
+  }
+  .seafood-item {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .seafood-item__text {
+    max-width: 100%;
+  }
+  .seafood-item--text--right .seafood-item__content {
+    margin-right: 0;
+  }
+  .seafood-item__title {
+    margin: 20px 0;
+  }
 }
 @media (max-width: 745px) {
   .title {
@@ -506,20 +529,23 @@ body {
     padding-left: 0;
     text-align: center;
   }
+  .seafood__blockquote-img {
+    max-width: 100%;
+  }
 }
 @media (max-width: 650px) {
   .product__content {
     width: 100%;
   }
-  .seafood-box{
+  .seafood-box {
     flex-wrap: wrap;
   }
 }
 @media (max-width: 600px) {
-  .product__content-box{
+  .product__content-box {
     display: flex;
   }
-  .product__content-list{
+  .product__content-list {
     width: 100%;
   }
 }
@@ -541,11 +567,31 @@ body {
     font-size: 34px;
     line-height: 44px;
   }
-  .product__content-btn{
+  .product__content-btn {
     padding: 12px 55px;
   }
-  .product{
+  .product {
     padding-top: 50px;
+  }
+  .seafood-box__items {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .product__content-img {
+    object-fit: contain;
+  }
+  .product__content-list {
+    padding: 0 15px;
+  }
+  .product__content-box {
+    flex-direction: column;
+  }
+  .contacts {
+    background: none;
+  }
+  .contacts__box {
+    padding: 0;
+    width: 100%;
   }
 }
 
@@ -569,5 +615,19 @@ body {
   }
   .header__content-btn {
     margin-left: 0;
+  }
+  .product__content-box {
+    flex-direction: column;
+  }
+  .contacts__box {
+    max-width: 100%;
+  }
+  .footer {
+    padding-bottom: 50px;
+  }
+  .footer__inner {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
 }
