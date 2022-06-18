@@ -609,6 +609,7 @@ body {
   }
   .logo {
     margin-left: 0;
+    transform: scale(.8);
   }
   .menu__list {
     left: 10%;
